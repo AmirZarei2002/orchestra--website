@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classical music website</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+    <!--jquery-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div class="preloader d-flex justify-content-center align-item-center">
+        <img src="R.gif" alt="preloader">
+    </div>
+    <!--End of Preloader-->
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand font-weight-bold text-capitalize text-info" href="#">my classical music website <i
+                class="fas fa-music"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+            <span class="navbar-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Musics
+                        <i class="fa fa-music" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Sheets
+                        <i class='fa fa-book-open'></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Your Favorite
+                        <i class="fa fa-heart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Explore...">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+        </form>
+    </nav>
+    <!--end navbar-->
+
+    <!--sidebar-->
+    <section class="position-absolute">
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light position-absolute">
+                <div class="container-fluid" id="navContainer">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Click to see more</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    More Services
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Talented
+                            Violinist</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Chloe</a>
+                            </li>
+                            <li>
+                                <a href="#">Ray</a>
+                            </li>
+                            <li>
+                                <a href="#">Jack</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Fans</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Sasan</a>
+                            </li>
+                            <li>
+                                <a href="#">Mahan</a>
+                            </li>
+                            <li>
+                                <a href="#">Kiarash</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Main sources</a>
+                    </li>
+                    <li>
+                        <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            About Us</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu2">
+                            <li>
+                                <a href="#">Designer</a>
+                            </li>
+                            <li>
+                                <a href="#">Developer</a>
+                            </li>
+                            <li>
+                                <a href="#">Chef</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!--end sidebar-->
+
+    <section class="menu">
+        <!--title-->
+        <div class="title">
+            <h2>Menu</h2>
+            <div class="underline"></div>
+        </div>
+        <!--filter buttons-->
+        <div class="btn-container">
+            <button type="button" class="filter-btn" data-id="all">all</button>
+            <button type="button" class="filter-btn" data-id="conductor">conductor</button>
+            <button type="button" class="filter-btn" data-id="violinist">violinist</button>
+            <button type="button" class="filter-btn" data-id="orchestras">orchestras</button>
+        </div>
+        <!--menu items-->
+        <div class="section-center">
+            <!--single item-->
+            <article class="menu-item">
+                <img src="maxim-vengerov-6-1407231500-view-0.jpg" alt="menu item" class="photo">
+                <div class="item-info">
+                    <header>
+                        <h4>maxim vengerov</h4>
+                        <h4 class="age">47</h4>
+                    </header>
+                    <p class="item-text">Vengerov was born in Novosibirsk, Siberia, the only child of
+                        Aleksandr and
+                        Larisa Borisovna, oboist and orphanage children’s choir director respectively, and is
+                        Jewish.[4][2] He sang in his mother's choir from the age of three.[5] He began studying the
+                        violin at age 5 with Galina Turchaninova, a famous violin teacher.</p>
+                </div>
+            </article>
+            <!--end of single item-->
+        </div>
+        <br>
+        <main class="card col" style="width: 50rem;">
+            <!--about-->
+            <section id="about" class="section">
+                <div class="title">
+                    <h2>about My website</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt reprehenderit
+                        cumque
+                        distinctio ipsa iure commodi. Ratione exercitationem voluptas voluptatum.</p>
+                </div>
+            </section>
+            <div>
+                <img class="img-responsive img-thumbnail" src="R.jpg" alt="" title="composer">
+            </div>
+            <br>
+            <!--articles-->
+            <section id="articles" class="section">
+                <div class="title">
+                    <h2>articles of this website</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, labore aspernatur corrupti
+                        soluta
+                        aut saepe aliquam, magnam repellendus fugit laboriosam reprehenderit laudantium libero
+                        voluptatem
+                        cumque iure consectetur minus iste debitis numquam facere corporis. Molestias, saepe animi
+                        error
+                        minus modi labore?</p>
+                </div>
+                <br>
+            </section>
+
+            <!-- image slideshow-->
+            <div class="slideshow-container img-fluid img-responsive img-thumbnail">
+                <div class="mySlides fade">
+                    <img src="./composers/download (3).jpg" alt="" class="imgSlideshow" title="Beethoven">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./composers/Mozart-768x7702.jpg" alt="" class="imgSlideshow" title="Mozart">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./composers/OIP.jpg" alt="" class="imgSlideshow" title="Bach">
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <!--contact-->
+            <section id="contact" class="section">
+                <div class="title">
+                    <h2>How you can contact us?</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque illo ab nobis reiciendis
+                        veritatis
+                        repellendus adipisci expedita suscipit unde, at accusamus obcaecati cum quasi itaque numquam
+                        vel
+                        placeat soluta? Sed!</p>
+                </div>
+            </section>
+            <div>
+                <img class="img-responsive img-thumbnail" src="world-music-map.png" alt="">
+            </div>
+    </section>
+    </main>
+    <!--form validation-->
+    <section class="card col-md-4 ml-2">
+        <form action="/action_page.php" class="was-validated card-body">
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" required> I agree with Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Dolores, voluptatum?.
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success bg-info text-light">Submit</button>
+        </form>
+    </section>
+    <!--end of form validation-->
+    <!--footer-->
+    <footer class="bg-light text-center text-white" id="footer">
+        <!--social media-->
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                    role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!"
+                    role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                    role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                    role="button"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Github -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                    role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <p class="outline-block">
+                copyright &copy; Amirhossein's website
+                <span id="date">2022</span>. all right reserved
+            </p>
+        </div>
+        <!-- Copyright -->
+
+        <!--social media end-->
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
